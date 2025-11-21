@@ -109,7 +109,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   coinText: {fileID: 0}
-  coinPickUpSounds: []
+  coinPickUpSounds:
+  - {fileID: 8300000, guid: a7904bec828320843865525738cc36df, type: 3}
+  - {fileID: 8300000, guid: 5bf416059103fda4290a5bb1246cdf2d, type: 3}
+  - {fileID: 8300000, guid: 59332c23b49f4724e95ef49fd82ce3b2, type: 3}
+  - {fileID: 8300000, guid: 4964a1648778eec40bac7da3f31de80a, type: 3}
+  - {fileID: 8300000, guid: 01b98a1579b7f6b4f94263fa2461d755, type: 3}
+  - {fileID: 8300000, guid: 6a4af730f4e5b1447b79180129387a82, type: 3}
 --- !u!61 &5750655819023558909
 BoxCollider2D:
   m_ObjectHideFlags: 0
