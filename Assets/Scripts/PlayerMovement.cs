@@ -1,10 +1,16 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(PlayerInput))]
 public class PlayerMovement : MonoBehaviour
 {
+    private int coins;
+    
     [SerializeField] private float moveSpeed = 3;
+
+    [SerializeField] TextMeshProUGUI coinText;
     
     private Rigidbody2D myRigidbody2D;
     
@@ -29,6 +35,16 @@ public class PlayerMovement : MonoBehaviour
         else if (move.ReadValue<Vector2>().x < 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Coin"))
+        {
+            coins++;
+            coinText.text = $"Coins:{coins}";
+            Destroy(other.gameObject);
         }
     }
 }
