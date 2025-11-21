@@ -21,6 +21,5 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         myRigidbody2D.linearVelocity = move.ReadValue<Vector2>() * moveSpeed;
-        Debug.Log(move.ReadValue<Vector2>());
     }
 }
